@@ -8,4 +8,9 @@ $(document).ready(function() {
       // saving above values into local storage
       localStorage.setItem(time, value);
     });
-  
+    function updateHour() {
+        // finds the current hour
+        var currentHour = moment().hours();
+    //displays the current day on the top of the page
+    $("#currentDay").text(moment().format("dddd, MMMM Do"));
+});
