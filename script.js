@@ -12,7 +12,14 @@ $(document).ready(function() {
         // finds the current hour
         var currentHour = moment().hours();
         console.log(currentHour);
-    }
+    
+    //loops over each time-block and gets the id and splits it to get the time of block
+    $(".time-block").each(function() {
+        var timeBlockHour = parseInt($(this).attr("id").split("-")[1]);
+        console.log(timeBlockHour);
+    });
+}
+
     updateHour();
     //displays the current day on the top of the page
     $("#currentDay").text(moment().format("dddd, MMMM Do"));
