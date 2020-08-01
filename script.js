@@ -11,6 +11,9 @@ $(document).ready(function() {
     function updateHour() {
         // finds the current hour
         var currentHour = moment().hours();
+        console.log(currentHour);
+    }
+    updateHour();
     //displays the current day on the top of the page
     $("#currentDay").text(moment().format("dddd, MMMM Do"));
 });
