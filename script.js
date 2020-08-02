@@ -17,6 +17,19 @@ $(document).ready(function() {
     $(".time-block").each(function() {
         var timeBlockHour = parseInt($(this).attr("id").split("-")[1]);
         console.log(timeBlockHour);
+        //if the current timeblock is < current hour, add the past class
+        if (timeBlockHour < currentHour) {
+            $(this).addClass("past");
+          } //if the current timeblock is the current hour, remove potential past class and add present
+          else if (timeBlockHour === currentHour) {
+            $(this).removeClass("past");
+            $(this).addClass("present");
+          } //add class of future to everything after the present
+          else {
+            $(this).removeClass("past");
+            $(this).removeClass("present");
+            $(this).addClass("future");
+          }
     });
 }
     //loads any local storage data
