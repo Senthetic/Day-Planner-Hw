@@ -19,8 +19,21 @@ $(document).ready(function() {
         console.log(timeBlockHour);
     });
 }
+    //loads any local storage data
+    $("#hour-9 .description").val(localStorage.getItem("hour-9"));
+    $("#hour-10 .description").val(localStorage.getItem("hour-10"));
+    $("#hour-11 .description").val(localStorage.getItem("hour-11"));
+    $("#hour-12 .description").val(localStorage.getItem("hour-12"));
+    $("#hour-13 .description").val(localStorage.getItem("hour-13"));
+    $("#hour-14 .description").val(localStorage.getItem("hour-14"));
+    $("#hour-15 .description").val(localStorage.getItem("hour-15"));
+    $("#hour-16 .description").val(localStorage.getItem("hour-16"));
+    $("#hour-17 .description").val(localStorage.getItem("hour-17"));
+
 
     updateHour();
+    //sets up interval to check when the hour needs to be updated, when it does it calls it.
+    var interval = setInterval(updateHour, 15000);
     //displays the current day on the top of the page
     $("#currentDay").text(moment().format("dddd, MMMM Do"));
 });
