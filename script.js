@@ -43,7 +43,7 @@ $(document).ready(function() {
     $("#hour-16 .description").val(localStorage.getItem("hour-16"));
     $("#hour-17 .description").val(localStorage.getItem("hour-17"));
 
-
+    //calls the updateHour function to use moment to show past present and future time blocks
     updateHour();
     //sets up interval to check when the hour needs to be updated, when it does it calls it.
     var interval = setInterval(updateHour, 15000);
