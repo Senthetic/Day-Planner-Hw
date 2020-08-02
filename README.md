@@ -46,3 +46,5 @@ You are required to submit the following for review:
 © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
 
 # WeatherDashboard - GT Homework
+In this homework I was assigned to create a simple calendar application that allows the user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+
